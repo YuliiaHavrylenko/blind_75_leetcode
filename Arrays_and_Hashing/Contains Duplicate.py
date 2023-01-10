@@ -23,4 +23,4 @@ class Solution:
                 table.add(i)
             else:
                 return True
-        return False 
+        return False
