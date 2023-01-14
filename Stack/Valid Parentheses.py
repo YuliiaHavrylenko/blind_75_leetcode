@@ -17,3 +17,21 @@ class Solution:
         while '()' in s or '[]'in s or '{}' in s:
             s = s.replace('()','').replace('[]','').replace('{}','')
         return False if len(s) !=0 else True
+
+#Solution with stack
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        closeHash = {")": "(", "]": "[", "}": "{"}
+
+        for b in s:
+            if b in closeHash:
+                if stack and stack[-1] == closeHash[b]:
+                    stack.pop()
+                else:
+                    return False
+            else:
+                stack.append(b)
+
+        return True if not stack else False
