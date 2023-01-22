@@ -22,3 +22,6 @@ class Solution:
             return max_price - min_price
         else:
             return 0
+
+
+

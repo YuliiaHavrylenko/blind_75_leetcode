@@ -17,7 +17,7 @@
 # 2. 1 step + 2 steps
 # 3. 2 steps + 1 step
 
-Solution:
+# Solution:
 class Solution:
     def climbStairs(self, n: int) -> int:
         one, two = 1, 1
