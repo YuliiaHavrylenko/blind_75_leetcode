@@ -15,3 +15,15 @@
 # Output: 8
 # Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        # Solution_1 with sums
+        # return -1*(sum(nums) - sum(list(i for i in range(len(nums) + 1))))
+
+        #Solution_2 with XOR
+        res = len(nums)
+
+        for i in range(len(nums)):
+            res += (i - nums[i])
+
+        return res
