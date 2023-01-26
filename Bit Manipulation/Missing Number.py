@@ -20,7 +20,7 @@ class Solution:
         # Solution_1 with sums
         # return -1*(sum(nums) - sum(list(i for i in range(len(nums) + 1))))
 
-        #Solution_2 with XOR
+        # Solution_2 with XOR
         res = len(nums)
 
         for i in range(len(nums)):
