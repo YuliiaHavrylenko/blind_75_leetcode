@@ -14,3 +14,20 @@
 #
 # Input: strs = ["a"]
 # Output: [["a"]]
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
+        if len(strs)<=0:
+            return [strs]
+        for s in strs:
+            count = [0] * 26
+
+            for c in s:
+                count[ord(c) - ord("a")] += 1
+
+                # a = 80 -> 0, 80 - 80
+                # b = 81 -> 1, 81 - 80
+
+            res[tuple(count)].append(s)
+        return res.values()
